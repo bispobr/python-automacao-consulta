@@ -41,3 +41,38 @@ sleep(1)
 
 botao_Pesquisa.click()
 sleep(5)
+
+links_processo = driver.find_elements(By.XPATH, "//a[@title = 'Ver Detalhes']")
+
+for link in links_processo:
+    janela_principal = driver.current_window_handle
+    link.click()
+    sleep(5)
+    janelas_abertas = driver.window_handles
+    for janela in janelas_abertas:
+        if janela not in janela_principal:
+            driver.switch_to.window(janela)
+            sleep(5)
+            numero_processo = driver.find_elements(
+                By.XPATH, "//div[@class = 'propertyView ']//div[@class = 'col-sm-12 ']")[0]
+            participantes = driver.find_elements(
+                By.XPATH, "//tbody[contains(@id,'processoPartesPoloAtivoResumidoList:tb')]//span[@class='text-bold']")
+
+            
+
+            lista_participantes = []
+
+            for participante in participantes:
+                lista_participantes.append(participante)
+
+            if len(lista_participantes) == 1:
+                pagina.append([oab_numero, numero_processo.text,
+                              str(lista_participantes[0])])
+            else:
+                pagina.append([oab_numero, numero_processo.text,
+                              ','.join(lista_participantes)])
+
+            workbook.save(
+                'C:\consulta\dados.xlsx')
+            driver.close()
+    driver.switch_to.window(janela_principal)
