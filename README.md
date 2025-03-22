@@ -1,6 +1,6 @@
 # python-automacao-consulta
 
-Este repositório contém uma automação simples realizada em um site . A automação utiliza o navegador EDGE para acessar o site, realizar o login de forma autônoma e preencher campos de buscas para posteiormente realizar a buscar por informações especificas. Essas informações são então armazenados em uma planilha. A automação foi implementada em Python.
+Este repositório contém uma automação simples realizada em um site . A automação utiliza o navegador EDGE para acessar o site, realizar o login de forma autônoma e preencher campos de buscas para posteriormente realizar a buscar por informações especificas. Essas informações são então armazenados em uma planilha. A automação foi implementada em Python.
 
 ## Como Usar
 
