@@ -1,14 +1,90 @@
-# python-automacao-consulta
+# Automação de Consultas
 
-Este repositório contém uma automação simples realizada em um site . A automação utiliza o navegador EDGE para acessar o site, realizar o login de forma autônoma e preencher campos de buscas para posteriormente realizar a buscar por informações especificas. Essas informações são então armazenados em uma planilha. A automação foi implementada em Python.
+Automação desenvolvida em Python para acessar um site utilizando o navegador Microsoft Edge, realizar autenticação e preencher campos de pesquisa para consultar informações específicas.
 
-## Como Usar
+Os resultados obtidos pela automação são armazenados em uma planilha para posterior utilização.
 
-1. Clone o repositório:
+## Funcionalidades
+
+- Acesso automatizado ao site
+- Login automatizado
+- Preenchimento de campos de pesquisa
+- Execução de consultas
+- Coleta das informações retornadas
+- Exportação dos resultados para planilha
+
+## Tecnologias
+
+- Python
+- Selenium
+- OpenPyXL
+- Microsoft Edge
+
+## Requisitos
+
+- Python instalado
+- Microsoft Edge instalado
+- Acesso ao site utilizado pela automação
+- Credenciais necessárias para autenticação
+- Selenium
+- OpenPyXL
+
+Instale as bibliotecas necessárias com:
 
 ```bash
-git https://github.com/bispobr/python-automacao-consulta.git
+pip install selenium openpyxl
 ```
-2. instale o selenium e openpyxl atraves do pip python
-3. Defina o local de salvamento da planilha
-2. execute o arquivo app.py
+
+## Como utilizar
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/bispobr/python-automacao-consulta.git
+cd python-automacao-consulta
+```
+
+Configure o local onde a planilha de resultados deverá ser armazenada de acordo com a implementação da aplicação.
+
+Execute a automação:
+
+```bash
+python app.py
+```
+
+## Fluxo da automação
+
+```text
+Início
+  │
+  ▼
+Acessar site
+  │
+  ▼
+Realizar login
+  │
+  ▼
+Preencher campos de busca
+  │
+  ▼
+Executar consulta
+  │
+  ▼
+Coletar informações
+  │
+  ▼
+Salvar resultados na planilha
+  │
+  ▼
+Fim
+```
+
+## Estrutura
+
+O ponto de entrada da aplicação é o arquivo `app.py`.
+
+Os demais arquivos e configurações devem ser consultados diretamente no projeto para identificar detalhes específicos da implementação.
+
+## Status
+
+Projeto de automação em Python desenvolvido para reduzir tarefas repetitivas de consulta e organização de informações em planilhas.
